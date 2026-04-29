@@ -63,7 +63,8 @@ class CustomExtraFieldsForm(ModelForm):
             "required": "Please enter a nickname to identify you.",
         }
 
-        self.fields["birthdate"].help_text = "Enter your date of birth."
+        self.fields["birthdate"].help_text = "Use the format YYYY/MM/DD"
+        self.fields["birthdate"].initial = "YYYY/MM/DD"
         self.fields["birthdate"].error_messages = {
             "required": "Please enter your date of birth.",
         }
