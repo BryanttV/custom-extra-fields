@@ -22,6 +22,13 @@ class CustomExtraFields(models.Model):
         verbose_name=_("Nickname"),
     )
 
+    birthdate = models.CharField(
+        blank=True,
+        max_length=10,
+        verbose_name=_("Date of birth"),
+        help_text=_("Use the format YYYY/MM/DD."),
+    )
+
     interests = models.TextField(
         blank=True,
         verbose_name=_("Interests"),
